@@ -3,6 +3,7 @@ package org.batcha.gradle.plugins.gitDependencies
 import org.junit.Before;
 import org.junit.Test;
 import org.gradle.api.Project;
+import org.gradle.api.plugins.JavaPlugin;
 import org.gradle.testfixtures.ProjectBuilder;
 import org.batcha.gradle.plugins.gitDependencies.GitDependenciesPlugin;
 
@@ -15,18 +16,23 @@ import org.batcha.gradle.plugins.gitDependencies.GitDependenciesPlugin;
 class SanityTest {
 
 	private Project project
-	private GitDependenciesPlugin plugin
+	private JavaPlugin pluginJava
+	private GitDependenciesPlugin gitPlugin
 
 	@Before
 	public void setup() {
 		project = ProjectBuilder.builder().build()
 
-		plugin = new GitDependenciesPlugin()
+		gitPlugin = new GitDependenciesPlugin()
+		
+		pluginJava = new JavaPlugin()
+		
+		pluginJava.apply(project)		
 	}
 
 	@Test
 	public void testDeps() {
 		
-		//plugin.apply(project)
+		gitPlugin.apply(project)
 	}
 }
