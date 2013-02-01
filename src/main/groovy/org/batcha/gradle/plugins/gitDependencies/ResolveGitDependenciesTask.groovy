@@ -95,7 +95,7 @@ class ResolveGitDependenciesTask extends DefaultTask {
   }
    
   /**
-   *  Checkout version (or master if not found)
+   * Checkout version (or master if not found)
    * @param destinationDir
    * @param version
    */

@@ -34,5 +34,7 @@ class SanityTest {
 	public void testDeps() {
 		
 		gitPlugin.apply(project)
+		
+		project.getTasksByName("resolveGitDependencies", false).iterator().next().execute()		
 	}
 }
