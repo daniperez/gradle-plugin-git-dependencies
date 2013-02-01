@@ -26,5 +26,7 @@ class SanityTest {
 
 	@Test
 	public void testDeps() {
+		
+		//plugin.apply(project)
 	}
 }
