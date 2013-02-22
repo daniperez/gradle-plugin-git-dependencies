@@ -41,3 +41,7 @@ dependencies {
     
 }
 ```
+
+## TODO
+
+* Allow git / repo urls (use case: sometimes the package is not available and you need the git repository, but sometimes you can give a hint about where the module is. Otherwise the resolution takes too much time).
